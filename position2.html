@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Position 2</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
+            margin: auto;
+        }
+
+        header p {
+            margin-top: 80px;
+        }
+
+        .satu {
+            background-color: gold;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /*
+        dibawah ini merupakan absolute position, dimana meskipun top left 0 maka item akan tetap keluar dari parentnya kecuali parentnya non-static 
+        .dua {
+            background-color: deepskyblue;
+            box-sizing: border-box;
+            padding: 60px;
+            text-align: center;
+            position: absolute;
+            top: 0; 
+            right: 0; 
+        } */
+
+        .dua {
+            background-color: deepskyblue;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 50px;
+            width: 100%;
+        }
+
+        .tiga {
+            background-color: aquamarine;
+            box-sizing: border-box;
+            padding: 5px;
+            text-align: center;   
+        }
+
+        main {
+            border: 5px solid black;
+            width: 600px;
+            height: 600px;
+            margin: auto;
+            position: relative;
+            top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Learn Position Absolute and Fixed</p>
+    </header>
+    <main>
+        <div class="satu">Satu</div>
+        <div class="dua">Dua</div>
+        <div class="tiga">Tiga</div>
+    </main>
+</body>
+</html>
