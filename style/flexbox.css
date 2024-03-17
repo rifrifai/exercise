@@ -1,6 +1,6 @@
 .container {
   width: 600px;
-  /* height: 150px; */
+  height: 150px;
   border: 5px solid #333;
   margin: 30px auto;
   padding: 5px;
@@ -8,7 +8,8 @@
   display: flex;
   /* flex-direction: column; */ /* digunakan untuk mngurutkan */
   /* flex-wrap: wrap; */ /* digunakan ketika space telah penuh */
-  justify-content: space-around; /* utk mengatur jarak pada items di container */
+  /* justify-content: space-around; utk mengatur jarak pada items di container */
+  align-items: flex-start;
 }
 
 /* untuk membuat clear cara lainnya menggunakan flex */
@@ -19,9 +20,36 @@
 } */
 
 .container div {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
   background-color: lightskyblue;
   /* float: left; */ /* bisa menggunkan flex jadi tidak perlu pakai float */
-  margin: 3px;
+  margin: 2px;
+  flex: 1;
 }
+
+.container div.dua {
+  flex: 2;
+  align-self: stretch;
+}
+
+/* .container div.tiga {
+  font-size: 5rem;
+}
+
+.empat {
+  font-size: 3rem;
+} */
+
+/* .satu {
+  order: 3;
+}
+.dua {
+  order: 4;
+}
+.tiga {
+  order: 2;
+}
+.empat {
+  order: 1;
+} */
