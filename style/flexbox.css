@@ -1,0 +1,27 @@
+.container {
+  width: 600px;
+  /* height: 150px; */
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  /* flex-direction: column; */ /* digunakan untuk mngurutkan */
+  /* flex-wrap: wrap; */ /* digunakan ketika space telah penuh */
+  justify-content: space-around; /* utk mengatur jarak pada items di container */
+}
+
+/* untuk membuat clear cara lainnya menggunakan flex */
+/* .container::after {
+  content: "";
+  display: block;
+  clear: both;
+} */
+
+.container div {
+  width: 100px;
+  height: 100px;
+  background-color: lightskyblue;
+  /* float: left; */ /* bisa menggunkan flex jadi tidak perlu pakai float */
+  margin: 3px;
+}
