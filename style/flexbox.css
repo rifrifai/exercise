@@ -24,7 +24,8 @@
   width: 100px;
   height: 100px;
   background-color: lightskyblue;
-  /* float: left; */ /* bisa menggunkan flex jadi tidak perlu pakai float */
+  /*float: left; */
+  /* bisa menggunkan flex jadi tidak perlu pakai float */
   margin: 2px;
   flex: 1;
 }
@@ -34,15 +35,13 @@
   align-self: stretch;
 }
 
-/* .container div.tiga {
+.container div.tiga {
   font-size: 5rem;
 }
-
 .empat {
   font-size: 3rem;
-} */
-
-/* .satu {
+}
+.satu {
   order: 3;
 }
 .dua {
@@ -53,4 +52,4 @@
 }
 .empat {
   order: 1;
-} */
+}
