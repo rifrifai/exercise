@@ -6,9 +6,10 @@
   padding: 5px;
   box-sizing: border-box;
   display: flex;
-  /* flex-direction: column; */ /* digunakan untuk mngurutkan */
-  /* flex-wrap: wrap; */ /* digunakan ketika space telah penuh */
-  /* justify-content: space-around; utk mengatur jarak pada items di container */
+  flex-direction: column; /* digunakan untuk mngurutkan */
+  flex-wrap: wrap; /* digunakan ketika space telah penuh */
+  justify-content: space-around;
+  /* utk mengatur jarak pada items di container */
   align-items: flex-start;
 }
 
@@ -20,8 +21,8 @@
 } */
 
 .container div {
-  /* width: 100px;
-  height: 100px; */
+  width: 100px;
+  height: 100px;
   background-color: lightskyblue;
   /* float: left; */ /* bisa menggunkan flex jadi tidak perlu pakai float */
   margin: 2px;
