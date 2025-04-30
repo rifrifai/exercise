@@ -1,9 +1,11 @@
+// membuat staircase
 let n = 10;
 for (let i = 1; i <= n; i++) {
-  let str = "-".repeat(n - i) + "$".repeat(i) + "-".repeat(n - i);
+  let str = "-".repeat(n - i) + "*".repeat(i) + "-".repeat(n - i);
   // console.log(str);
 }
 
+// mengambil sum terbesar dan terkecil
 let arr = [11, 12, 13, 14, 15];
 function miniMaxSum(arr) {
   let highest = Math.max(...arr);
@@ -16,6 +18,7 @@ function miniMaxSum(arr) {
 }
 miniMaxSum(arr);
 
+// menghitung kue ulang tahun
 let candles = [3, 2, 1, 3];
 function birthdayCakeCandles(candles) {
   const largestN = candles.sort((a, b) => b - a)[0];
@@ -29,6 +32,7 @@ function birthdayCakeCandles(candles) {
 }
 birthdayCakeCandles(candles);
 
+// mengubah format waktu
 let s = "07:05:45PM";
 function timeConvertion(s) {
   let [hours, minutes, seconds] = s
@@ -47,3 +51,17 @@ function timeConvertion(s) {
   return `${hours}:${minutes}:${seconds}`;
 }
 timeConvertion(s);
+
+// membandingkan triplets
+function compareTriplets() {
+  const result = [0, 0];
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] > b[i]) {
+      result[0]++;
+    } else if (a[i] < b[i]) {
+      result[1]++;
+    }
+  }
+  return result;
+}
+compareTriplets();
