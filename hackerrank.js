@@ -1,8 +1,8 @@
 // membuat staircase
 let n = 10;
 for (let i = 1; i <= n; i++) {
-  let str = "-".repeat(n - i) + "*".repeat(i) + "-".repeat(n - i);
-  // console.log(str);
+  let str = " ".repeat(n - i) + "*".repeat(i);
+  console.log(str);
 }
 
 // mengambil sum terbesar dan terkecil
@@ -14,7 +14,7 @@ function miniMaxSum(arr) {
   // console.log(sum);
   // console.log(lowest);
   // console.log(highest);
-  // console.log(sum - highest + " " + (sum - lowest));
+  console.log(sum - highest + " " + (sum - lowest));
 }
 miniMaxSum(arr);
 
@@ -22,7 +22,7 @@ miniMaxSum(arr);
 let candles = [3, 2, 1, 3];
 function birthdayCakeCandles(candles) {
   const largestN = candles.sort((a, b) => b - a)[0];
-  return candles.filter((c) => c == largestN).length;
+  console.log(candles.filter((c) => c == largestN).length);
   // const maxNum = Math.max(...candles);
   // let counter = 1;
   // for (let i = 0; i < candles.length; i++) {
@@ -48,7 +48,8 @@ function timeConvertion(s) {
   [hours, minutes, seconds] = [hours, minutes, seconds].map((x) =>
     String(x).padStart(2, "0")
   );
-  return `${hours}:${minutes}:${seconds}`;
+  // return `${hours}:${minutes}:${seconds}`;
+  console.log(`${hours}:${minutes}:${seconds}`);
 }
 timeConvertion(s);
 
@@ -64,7 +65,8 @@ function compareTriplets(a, b) {
       result[1]++;
     }
   }
-  return result;
+  // return result;
+  console.log(result);
 }
 compareTriplets(a, b);
 
@@ -84,6 +86,7 @@ function gradingStudents(grades) {
       result.push(grades[i]);
     }
   }
-  return result;
+  // return result;
+  console.log(result);
 }
 gradingStudents(grades);
