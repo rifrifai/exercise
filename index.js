@@ -67,3 +67,23 @@ function compareTriplets(a, b) {
   return result;
 }
 compareTriplets(a, b);
+
+// grading students
+let grades = [73, 67, 38, 33];
+function gradingStudents(grades) {
+  let result = [];
+  for (let i = 0; i < grades.length; i++) {
+    if (grades[i] >= 38) {
+      let nextMultiple = Math.ceil(grades[i] / 5) * 5;
+      if (nextMultiple - grades[i] < 3) {
+        result.push(nextMultiple);
+      } else {
+        result.push(grades[i]);
+      }
+    } else {
+      result.push(grades[i]);
+    }
+  }
+  return result;
+}
+gradingStudents(grades);
