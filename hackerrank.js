@@ -123,12 +123,18 @@ v1 = 2; //3
 x2 = 5; //4
 v2 = 3; //2
 function kangaroo(x1, v1, x2, v2) {
-  if (v1 > v2) {
-    console.log("YES");
-  } else if ((v2 - v1) % (x2 - x1) == 0) {
-    console.log("NO");
-  } else {
-    console.log("NO");
+  for (let i = 0; i < 10000; i++) {
+    if (x1 === x2) {
+      console.log("YES");
+      return;
+    }
+    if ((x1 > x2 && v1 >= v2) || (x2 > x1 && v2 >= v1)) {
+      console.log("NO");
+      return;
+    }
+    x1 += v1;
+    x2 += v2;
   }
+  console.log("NO");
 }
 kangaroo(x1, v1, x2, v2);
