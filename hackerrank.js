@@ -16,7 +16,7 @@ function miniMaxSum(arr) {
   // console.log(highest);
   console.log(sum - highest + " " + (sum - lowest));
 }
-miniMaxSum(arr);
+// miniMaxSum(arr);
 
 // menghitung kue ulang tahun
 let candles = [3, 2, 1, 3];
@@ -30,17 +30,17 @@ function birthdayCakeCandles(candles) {
   //   return counter;
   // }
 }
-birthdayCakeCandles(candles);
+// birthdayCakeCandles(candles);
 
 // mengubah format waktu
-let s = "07:05:45PM";
-function timeConvertion(s) {
-  let [hours, minutes, seconds] = s
+let st = "07:05:45PM";
+function timeConvertion(st) {
+  let [hours, minutes, seconds] = st
     .substring(0, 8)
     .split(":")
     .map((x) => Number(x));
 
-  if (s.includes("PM")) {
+  if (st.includes("PM")) {
     hours = hours === 12 ? 12 : hours + 12;
   } else {
     hours = hours === 12 ? 0 : hours;
@@ -51,24 +51,24 @@ function timeConvertion(s) {
   // return `${hours}:${minutes}:${seconds}`;
   console.log(`${hours}:${minutes}:${seconds}`);
 }
-timeConvertion(s);
+// timeConvertion(st);
 
 // membandingkan triplets
-let a = [5, 6, 7];
-let b = [3, 6, 10];
-function compareTriplets(a, b) {
+let ab = [5, 6, 7];
+let ba = [3, 6, 10];
+function compareTriplets(ab, ba) {
   const result = [0, 0];
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] > b[i]) {
+  for (let i = 0; i < ab.length; i++) {
+    if (ab[i] > ba[i]) {
       result[0]++;
-    } else if (a[i] < b[i]) {
+    } else if (ab[i] < ba[i]) {
       result[1]++;
     }
   }
   // return result;
   console.log(result);
 }
-compareTriplets(a, b);
+// compareTriplets(ab, ba);
 
 // grading students
 let grades = [73, 67, 38, 33];
@@ -89,4 +89,30 @@ function gradingStudents(grades) {
   // return result;
   console.log(result);
 }
-gradingStudents(grades);
+// gradingStudents(grades);
+
+// menghitung apel dan jeruk
+let s = 7;
+let t = 11;
+let a = 5;
+let b = 15;
+let apples = [-2, 2, 1];
+let oranges = [5, -6];
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+  let hitungApel = 0;
+  let hitungJeruk = 0;
+
+  for (let i = 0; i < apples.length; i++) {
+    if (a + apples[i] >= s && a + apples[i] <= t) {
+      hitungApel++;
+    }
+  }
+  for (let y = 0; y < oranges.length; y++) {
+    if (b + oranges[y] >= s && b + oranges[y] <= t) {
+      hitungJeruk++;
+    }
+  }
+  console.log(hitungApel);
+  console.log(hitungJeruk);
+}
+// countApplesAndOranges(s, t, a, b, apples, oranges);
