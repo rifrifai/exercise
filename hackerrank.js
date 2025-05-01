@@ -2,7 +2,7 @@
 let n = 10;
 for (let i = 1; i <= n; i++) {
   let str = " ".repeat(n - i) + "*".repeat(i);
-  console.log(str);
+  // console.log(str);
 }
 
 // mengambil sum terbesar dan terkecil
@@ -116,3 +116,19 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
   console.log(hitungJeruk);
 }
 // countApplesAndOranges(s, t, a, b, apples, oranges);
+
+// kangaroo
+x1 = 0; //0
+v1 = 2; //3
+x2 = 5; //4
+v2 = 3; //2
+function kangaroo(x1, v1, x2, v2) {
+  if (v1 > v2) {
+    console.log("YES");
+  } else if ((v2 - v1) % (x2 - x1) == 0) {
+    console.log("NO");
+  } else {
+    console.log("NO");
+  }
+}
+kangaroo(x1, v1, x2, v2);
