@@ -137,4 +137,27 @@ function kangaroo(x1, v1, x2, v2) {
   }
   console.log("NO");
 }
-kangaroo(x1, v1, x2, v2);
+// kangaroo(x1, v1, x2, v2);
+
+function getTotalX(aa, bb) {
+  let result = [];
+  for (let i = aa[aa.length - 1]; i <= bb[0]; i++) {
+    let flag = true;
+    for (let j = 0; j < aa.length; j++) {
+      if (i % aa[j] !== 0) {
+        flag = false;
+        break;
+      }
+    }
+    for (let k = 0; k < bb.length; k++) {
+      if (bb[k] % i !== 0) {
+        flag = false;
+        break;
+      }
+    }
+    if (flag) {
+      result.push(i);
+    }
+  }
+  return result.length;
+}
