@@ -139,25 +139,20 @@ function kangaroo(x1, v1, x2, v2) {
 }
 // kangaroo(x1, v1, x2, v2);
 
+// between two sets
+let aa = [2, 4];
+let bb = [16, 32, 96];
 function getTotalX(aa, bb) {
-  let result = [];
+  let count = 0;
   for (let i = aa[aa.length - 1]; i <= bb[0]; i++) {
-    let flag = true;
-    for (let j = 0; j < aa.length; j++) {
-      if (i % aa[j] !== 0) {
-        flag = false;
-        break;
-      }
-    }
-    for (let k = 0; k < bb.length; k++) {
-      if (bb[k] % i !== 0) {
-        flag = false;
-        break;
-      }
-    }
-    if (flag) {
-      result.push(i);
+    let divisibleByAa = aa.every((num) => i % num === 0);
+    let dividesB = bb.every((num) => num % i === 0);
+
+    if (divisibleByAa && dividesB) {
+      count++;
     }
   }
-  return result.length;
+  console.log(count);
+  return;
 }
+// getTotalX(aa, bb);
