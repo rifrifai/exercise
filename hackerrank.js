@@ -92,7 +92,7 @@ function gradingStudents(grades) {
 // gradingStudents(grades);
 
 // menghitung apel dan jeruk
-let s = 7;
+// let s = 7;
 let t = 11;
 let a = 5;
 let b = 15;
@@ -176,4 +176,23 @@ function breakingRecords(scores) {
   }
   console.log(maxCount, minCount);
 }
-breakingRecords(scores);
+// breakingRecords(scores);
+
+// subarray divison
+let s = [1, 2, 1, 3, 2];
+let d = 3;
+let m = 2;
+function birthday(s, d, m) {
+  let count = 0;
+  for (let i = 0; i <= s.length - m; i++) {
+    let total = 0;
+    for (let j = 0; j < m; j++) {
+      total += s[i + j];
+    }
+    if (total === d) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+birthday(s, d, m);
